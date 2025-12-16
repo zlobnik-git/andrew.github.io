@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои курсы - EduFlow</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/personal.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Боковая панель -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduFlow</span>
+            </a>
+                    <!-- ДОБАВЛЕНО: Кнопка сворачивания -->
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <span>АЖ</span>
+                </div>
+                <div class="user-info">
+                    <h3>Алексей Журавлев</h3>
+                    <p>Ученик</p>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Дашборд</span>
+            </a>
+            <a href="courses.html" class="nav-item active">
+                <i class="fas fa-book-open"></i>
+                <span>Мои курсы</span>
+            </a>
+            <a href="progress.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Прогресс</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Расписание</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Задания</span>
+                <span class="badge">3</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>Материалы</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user-cog"></i>
+                <span>Настройки</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="../../index.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Выйти</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="personal-content">
+        <header class="personal-header">
+            <div>
+                <h1>Мои курсы</h1>
+                <p>Все курсы, на которые вы записаны</p>
+            </div>
+            
+            <div class="header-actions">
+    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Открыть меню">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Поиск по курсам...">
+    </div>
+    
+    <button class="notification-btn">
+        <i class="fas fa-bell"></i>
+        <span class="notification-badge">2</span>
+    </button>
+</div>
+        </header>
+
+        <!-- Фильтры курсов -->
+        <div class="filters" style="margin-bottom: var(--space-xl);">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершённые</button>
+            <button class="filter-btn" data-filter="math">Математика</button>
+            <button class="filter-btn" data-filter="informatics">Информатика</button>
+            <button class="filter-btn" data-filter="russian">Русский</button>
+        </div>
+
+        <!-- Список курсов -->
+        <div class="courses-grid">
+            <!-- Курс 1: Математика -->
+            <div class="course-card" data-category="active math">
+                <div class="course-badge" style="background: var(--primary);">В процессе</div>
+                <div class="course-icon">
+                    <i class="fas fa-square-root-alt"></i>
+                </div>
+                <h3>Математика ЕГЭ профиль</h3>
+                <p>Полный курс подготовки к профильному ЕГЭ по математике. Разбор всех заданий части 1 и 2.</p>
+                
+                <div class="course-progress">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Прогресс:</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-details">
+                    <span><i class="fas fa-video"></i> 18/24 уроков</span>
+                    <span><i class="fas fa-clock"></i> 32 ч из 48 ч</span>
+                    <span><i class="fas fa-star"></i> 4.8</span>
+                </div>
+                
+                <div class="course-price" style="color: var(--success);">
+                    <i class="fas fa-check-circle"></i> Оплачен до 15.06.2025
+                </div>
+                
+                <div style="display: flex; gap: var(--space-sm); margin-top: auto;">
+                    <button class="btn btn-primary btn-block continue-btn" data-course="math">
+                        <i class="fas fa-play"></i> Продолжить обучение
+                    </button>
+                    <button class="btn btn-outline course-details-btn" data-course="math">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Курс 2: Информатика -->
+            <div class="course-card" data-category="active informatics">
+                <div class="course-badge" style="background: var(--primary);">В процессе</div>
+                <div class="course-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Информатика ЕГЭ</h3>
+                <p>Программирование на Python, решение задач по информатике, подготовка к ЕГЭ на высокий балл.</p>
+                
+                <div class="course-progress">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Прогресс:</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-details">
+                    <span><i class="fas fa-video"></i> 12/20 уроков</span>
+                    <span><i class="fas fa-clock"></i> 24 ч из 40 ч</span>
+                    <span><i class="fas fa-star"></i> 4.9</span>
+                </div>
+                
+                <div class="course-price" style="color: var(--success);">
+                    <i class="fas fa-check-circle"></i> Оплачен до 10.07.2025
+                </div>
+                
+                <div style="display: flex; gap: var(--space-sm); margin-top: auto;">
+                    <button class="btn btn-primary btn-block continue-btn" data-course="informatics">
+                        <i class="fas fa-play"></i> Продолжить обучение
+                    </button>
+                    <button class="btn btn-outline course-details-btn" data-course="informatics">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Курс 3: Русский язык -->
+            <div class="course-card" data-category="completed russian">
+                <div class="course-badge" style="background: var(--success);">Завершён</div>
+                <div class="course-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Русский язык ОГЭ</h3>
+                <p>Подготовка к ОГЭ по русскому языку. Учим писать изложение и сочинение, разбираем тесты.</p>
+                
+                <div class="course-progress">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Прогресс:</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-details">
+                    <span><i class="fas fa-video"></i> 20/20 уроков</span>
+                    <span><i class="fas fa-clock"></i> 40 ч</span>
+                    <span><i class="fas fa-star"></i> 4.7</span>
+                </div>
+                
+                <div class="course-price" style="color: var(--text-light);">
+                    <i class="fas fa-trophy"></i> Курс завершён 15.05.2024
+                </div>
+                
+                <div style="display: flex; gap: var(--space-sm); margin-top: auto;">
+                    <button class="btn btn-outline btn-block review-course-btn" data-course="russian">
+                        <i class="fas fa-redo"></i> Повторить материал
+                    </button>
+                    <button class="btn btn-outline get-certificate-btn" data-course="russian">
+                        <i class="fas fa-award"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Курс 4: Физика -->
+            <div class="course-card" data-category="active">
+                <div class="course-badge" style="background: var(--warning);">Скоро начнётся</div>
+                <div class="course-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h3>Физика ЕГЭ</h3>
+                <p>Курс для подготовки к ЕГЭ по физике. Решение задач по механике, термодинамике и оптике.</p>
+                
+                <div class="course-progress">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Начало:</span>
+                        <span>15.01.2025</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-details">
+                    <span><i class="fas fa-video"></i> 0/100 уроков</span>
+                    <span><i class="fas fa-clock"></i> 0 ч из 80 ч</span>
+                    <span><i class="fas fa-user-friends"></i> Старт 15.01</span>
+                </div>
+                
+                <div class="course-price" style="color: var(--text-light);">
+                    Ожидает начала
+                </div>
+                
+                <button class="btn btn-outline btn-block" disabled style="margin-top: auto;">
+                    <i class="fas fa-clock"></i> Курс начнётся скоро
+                </button>
+            </div>
+        </div>
+
+        <!-- Рекомендации -->
+        <section style="margin-top: var(--space-2xl);">
+            <h2>Рекомендуемые курсы</h2>
+            <p style="color: var(--text-light); margin-bottom: var(--space-lg);">На основе вашего прогресса</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Математика база</h3>
+                    <p>Для уверенной сдачи базового уровня ЕГЭ по математике</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 40 уроков</span>
+                        <span><i class="fas fa-clock"></i> 3 месяца</span>
+                    </div>
+                    <div class="course-price">от 2 900 ₽/мес</div>
+                    <button class="btn btn-outline btn-block add-course-btn">
+                        <i class="fas fa-plus"></i> Добавить курс
+                    </button>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Программирование Python</h3>
+                    <p>Основы программирования для задач ЕГЭ по информатике</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 30 уроков</span>
+                        <span><i class="fas fa-clock"></i> 2 месяца</span>
+                    </div>
+                    <div class="course-price">от 3 200 ₽/мес</div>
+                    <button class="btn btn-outline btn-block add-course-btn">
+                        <i class="fas fa-plus"></i> Добавить курс
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/personal.js"></script>
+    <script>
+        // Дополнительный скрипт для страницы курсов
+        document.addEventListener('DOMContentLoaded', function() {
+            // Фильтрация курсов
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    courseCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Поиск курсов
+            const searchInput = document.getElementById('courseSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value.toLowerCase();
+                    
+                    courseCards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const desc = card.querySelector('p').textContent.toLowerCase();
+                        
+                        if (title.includes(query) || desc.includes(query)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+            
+            // Кнопка добавления курса
+            const addCourseBtn = document.getElementById('addCourseBtn');
+            if (addCourseBtn) {
+                addCourseBtn.addEventListener('click', function() {
+                    showCourseCatalog();
+                });
+            }
+            
+            // Кнопки "Продолжить обучение"
+            document.querySelectorAll('.continue-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const course = this.dataset.course;
+                    startCourse(course);
+                });
+            });
+            
+            // Кнопки деталей курса
+            document.querySelectorAll('.course-details-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const course = this.dataset.course;
+                    showCourseDetails(course);
+                });
+            });
+            
+            // Кнопки получения сертификата
+            document.querySelectorAll('.get-certificate-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    generateCertificate();
+                });
+            });
+            
+            // Кнопки добавления рекомендованных курсов
+            document.querySelectorAll('.add-course-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const courseCard = this.closest('.course-card');
+                    const courseName = courseCard.querySelector('h3').textContent;
+                    addNewCourse(courseName);
+                });
+            });
+        });
+        
+        function showCourseCatalog() {
+            const modalContent = `
+                <h3>Доступные курсы</h3>
+                <p>Выберите новый курс для добавления в ваш учебный план:</p>
+                
+                <div style="display: grid; gap: var(--space-md); margin-top: var(--space-lg);">
+                    <div style="padding: var(--space-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="margin: 0 0 5px 0;">Математика база</h4>
+                                <p style="margin: 0; color: var(--text-light);">Подготовка к базовому ЕГЭ</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: 600; color: var(--primary);">2 900 ₽/мес</div>
+                                <button class="btn btn-primary btn-small select-course-btn" data-course="math-base">
+                                    Выбрать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="padding: var(--space-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="margin: 0 0 5px 0;">Программирование Python</h4>
+                                <p style="margin: 0; color: var(--text-light);">Основы для задач ЕГЭ</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: 600; color: var(--primary);">3 200 ₽/мес</div>
+                                <button class="btn btn-primary btn-small select-course-btn" data-course="python">
+                                    Выбрать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            showModal(modalContent, 'Выбор курса');
+            
+            // Обработка выбора курса
+            setTimeout(() => {
+                document.querySelectorAll('.select-course-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const course = this.dataset.course;
+                        showModal('<p>Курс успешно добавлен! Начните обучение в разделе "Мои курсы".</p>', 'Курс добавлен');
+                    });
+                });
+            }, 100);
+        }
+        
+        function startCourse(course) {
+            // В реальном проекте здесь будет переход к уроку
+            showModal(`
+                <h3>Начать обучение</h3>
+                <p>Вы будете перенаправлены к последнему пройденному уроку курса "${getCourseName(course)}".</p>
+                <p>Готовы продолжить?</p>
+            `, 'Продолжить обучение');
+        }
+        
+        function showCourseDetails(course) {
+            const courseData = {
+                'math': {
+                    name: 'Математика ЕГЭ профиль',
+                    teacher: 'Анна Сергеева',
+                    lessons: '24 урока',
+                    duration: '48 часов',
+                    rating: '4.8',
+                    description: 'Полный курс подготовки к профильному ЕГЭ по математике с разбором всех типов задач.'
+                },
+                'informatics': {
+                    name: 'Информатика ЕГЭ',
+                    teacher: 'Михаил Соколов',
+                    lessons: '20 уроков',
+                    duration: '40 часов',
+                    rating: '4.9',
+                    description: 'Программирование на Python и решение задач ЕГЭ по информатике.'
+                },
+                'russian': {
+                    name: 'Русский язык ОГЭ',
+                    teacher: 'Ольга Иванова',
+                    lessons: '20 уроков',
+                    duration: '40 часов',
+                    rating: '4.7',
+                    description: 'Подготовка к ОГЭ по русскому языку: изложение, сочинение, тесты.'
+                }
+            };
+            
+            const data = courseData[course] || courseData.math;
+            
+            const modalContent = `
+                <h3>${data.name}</h3>
+                <p>${data.description}</p>
+                
+                <div style="background: var(--gray-100); padding: var(--space-md); border-radius: var(--radius-md); margin: var(--space-md) 0;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                        <div>
+                            <strong><i class="fas fa-chalkboard-teacher"></i> Преподаватель:</strong>
+                            <p>${data.teacher}</p>
+                        </div>
+                        <div>
+                            <strong><i class="fas fa-video"></i> Уроков:</strong>
+                            <p>${data.lessons}</p>
+                        </div>
+                        <div>
+                            <strong><i class="fas fa-clock"></i> Длительность:</strong>
+                            <p>${data.duration}</p>
+                        </div>
+                        <div>
+                            <strong><i class="fas fa-star"></i> Рейтинг:</strong>
+                            <p>${data.rating}/5.0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Программа курса:</h4>
+                <ul>
+                    <li>Модуль 1: Базовые темы</li>
+                    <li>Модуль 2: Продвинутые задачи</li>
+                    <li>Модуль 3: Практика ЕГЭ</li>
+                    <li>Модуль 4: Итоговое тестирование</li>
+                </ul>
+            `;
+            
+            showModal(modalContent, 'Информация о курсе');
+        }
+        
+        function generateCertificate() {
+            showModal(`
+                <h3>Сертификат о прохождении</h3>
+                <p>Вы успешно завершили курс! Сгенерировать сертификат?</p>
+                <div style="text-align: center; margin: var(--space-lg) 0;">
+                    <div style="border: 2px dashed var(--primary); padding: var(--space-xl); border-radius: var(--radius-lg); background: var(--background-alt);">
+                        <h4 style="color: var(--primary);">СЕРТИФИКАТ</h4>
+                        <p>Выдан: <strong>Алексей Журавлев</strong></p>
+                        <p>За успешное прохождение курса</p>
+                        <h3>"Русский язык ОГЭ"</h3>
+                        <p>Дата: 15.05.2024</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block" id="downloadCertificateBtn">
+                    <i class="fas fa-download"></i> Скачать сертификат (PDF)
+                </button>
+            `, 'Сертификат');
+            
+            setTimeout(() => {
+                document.getElementById('downloadCertificateBtn')?.addEventListener('click', function() {
+                    showModal('<p>Сертификат скачивается... В реальном проекте будет скачан PDF файл.</p>', 'Скачивание');
+                });
+            }, 100);
+        }
+        
+        function addNewCourse(courseName) {
+            showModal(`
+                <h3>Добавить курс</h3>
+                <p>Вы хотите добавить курс "${courseName}" в свой учебный план?</p>
+                <p>После добавления курс будет доступен в разделе "Мои курсы".</p>
+                
+                <div style="margin-top: var(--space-lg);">
+                    <h4>Выберите тариф:</h4>
+                    <div style="display: grid; gap: var(--space-sm);">
+                        <label style="display: flex; align-items: center; padding: var(--space-sm); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);">
+                            <input type="radio" name="tariff" value="basic" checked style="margin-right: var(--space-sm);">
+                            <div>
+                                <strong>Базовый (2 900 ₽/мес)</strong>
+                                <div style="font-size: 0.9rem; color: var(--text-light);">Доступ к видеоурокам</div>
+                            </div>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; padding: var(--space-sm); border: 1px solid var(--primary); border-radius: var(--radius-sm); background: var(--background-alt);">
+                            <input type="radio" name="tariff" value="standard" style="margin-right: var(--space-sm);">
+                            <div>
+                                <strong>Стандарт (4 900 ₽/мес)</strong>
+                                <div style="font-size: 0.9rem; color: var(--text-light);">Видео + проверка ДЗ + вебинары</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            `, 'Добавление курса');
+        }
+        
+        function getCourseName(course) {
+            const names = {
+                'math': 'Математика ЕГЭ профиль',
+                'informatics': 'Информатика ЕГЭ',
+                'russian': 'Русский язык ОГЭ'
+            };
+            return names[course] || 'Курс';
+        }
+        
+        function showModal(content, title = '') {
+            // Используем существующую функцию из personal.js
+            if (typeof window.showModal === 'function') {
+                window.showModal(content, title);
+            } else {
+                // Запасной вариант
+                alert(title + ': ' + content.replace(/<[^>]*>/g, ' '));
+            }
+        }
+    </script>
+</body>
+</html>
