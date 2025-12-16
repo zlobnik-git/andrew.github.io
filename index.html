@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBrain - Онлайн-школа подготовки к экзаменам</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EasyBrain</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active">Главная</a>
+                    <a href="#courses">Курсы</a>
+                    <a href="#teachers">Преподаватели</a>
+                    <a href="#library">Материалы</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#pricing">Тарифы</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="pages/personal/index.html" class="btn btn-login">
+                        <i class="fas fa-user"></i> Войти
+                    </a>
+                    <a href="#contact" class="btn btn-primary">Бесплатный урок</a>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Сдай ОГЭ и ЕГЭ на <span class="highlight">80+</span> баллов</h1>
+                <p class="hero-subtitle">Структурированные курсы от экспертов, персональный трекер прогресса и поддержка 24/7. Готовься к экзаменам эффективно и без стресса.</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary btn-large">
+                        <i class="fas fa-play-circle"></i> Выбрать курс
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-large">
+                        <i class="fas fa-gift"></i> Получить пробный урок
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1500+</span>
+                        <span class="stat-text">Учеников</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-text">Сдали успешно</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-text">Средний рейтинг</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/firstbanner.jpg" alt="Подготовка к экзаменам с EasyBrain">
+                <div class="image-overlay">
+                    <div class="overlay-text">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Разбор реальных заданий ЕГЭ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">Как это работает</h2>
+            <p class="section-subtitle">Всего 4 простых шага к успешной сдаче экзамена</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="step-number">1</span>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Выбери предмет</h3>
+                    <p>Подбери курс по нужному предмету и уровню подготовки</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="step-number">2</span>
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Смотри уроки</h3>
+                    <p>Изучай темы с помощью видеоуроков от экспертов</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="step-number">3</span>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Решай задания</h3>
+                    <p>Закрепляй знания на практике с проверкой преподавателя</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span class="step-number">4</span>
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Сдай экзамен</h3>
+                    <p>Достигай цели с нашим трекером прогресса и поддержкой</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог курсов -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Каталог курсов</h2>
+            <p class="section-subtitle">Подготовка к ОГЭ и ЕГЭ по всем предметам</p>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="oge">ОГЭ</button>
+                <button class="filter-btn" data-filter="ege">ЕГЭ</button>
+                <button class="filter-btn" data-filter="math">Математика</button>
+                <button class="filter-btn" data-filter="russian">Русский</button>
+                <button class="filter-btn" data-filter="physics">Физика</button>
+                <button class="filter-btn" data-filter="informatics">Информатика</button>
+                <button class="filter-btn" data-filter="chemistry">Химия</button>
+                <button class="filter-btn" data-filter="biology">Биология</button>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Курс 1 - Математика ЕГЭ профиль -->
+                <div class="course-card visible" data-category="ege math">
+                    <div class="course-badge">Самый популярный</div>
+                    <div class="course-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3>Математика ЕГЭ профиль</h3>
+                    <p>Полный курс подготовки к профильному ЕГЭ по математике. Разбор всех заданий части 1 и 2.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 120 уроков</span>
+                        <span><i class="fas fa-clock"></i> 6 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 11 класс</span>
+                    </div>
+                    <div class="course-price">от 3 900 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 2 - Русский язык ОГЭ -->
+                <div class="course-card visible" data-category="oge russian">
+                    <div class="course-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Русский язык ОГЭ</h3>
+                    <p>Подготовка к ОГЭ по русскому языку. Учим писать изложение и сочинение, разбираем тесты.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 80 уроков</span>
+                        <span><i class="fas fa-clock"></i> 4 месяца</span>
+                        <span><i class="fas fa-user-graduate"></i> 9 класс</span>
+                    </div>
+                    <div class="course-price">от 2 900 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 3 - Физика ЕГЭ -->
+                <div class="course-card visible" data-category="ege physics">
+                    <div class="course-badge">Высокий спрос</div>
+                    <div class="course-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Физика ЕГЭ</h3>
+                    <p>Курс для подготовки к ЕГЭ по физике. Решение задач по механике, термодинамике и оптике.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 100 уроков</span>
+                        <span><i class="fas fa-clock"></i> 8 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 4 200 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 4 - Информатика ЕГЭ -->
+                <div class="course-card visible" data-category="ege informatics">
+                    <div class="course-badge">Новинка</div>
+                    <div class="course-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Информатика ЕГЭ</h3>
+                    <p>Программирование на Python, решение задач по информатике, подготовка к ЕГЭ на высокий балл.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 90 уроков</span>
+                        <span><i class="fas fa-clock"></i> 7 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 4 500 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 5 - Математика ОГЭ -->
+                <div class="course-card hidden" data-category="oge math">
+                    <div class="course-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Математика ОГЭ</h3>
+                    <p>Подготовка к ОГЭ по математике. Разбор всех заданий из первой и второй части экзамена.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 70 уроков</span>
+                        <span><i class="fas fa-clock"></i> 5 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 9 класс</span>
+                    </div>
+                    <div class="course-price">от 3 200 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 6 - Русский язык ЕГЭ -->
+                <div class="course-card visible" data-category="ege russian">
+                    <div class="course-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Русский язык ЕГЭ</h3>
+                    <p>Полный курс подготовки к ЕГЭ по русскому языку. Учим писать сочинение на максимальный балл.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 85 уроков</span>
+                        <span><i class="fas fa-clock"></i> 6 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 11 класс</span>
+                    </div>
+                    <div class="course-price">от 3 600 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 7 - Химия ЕГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="ege chemistry">
+                    <div class="course-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Химия ЕГЭ</h3>
+                    <p>Подготовка к ЕГЭ по химии. Разбор всех типов заданий, решение расчетных и экспериментальных задач.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 95 уроков</span>
+                        <span><i class="fas fa-clock"></i> 7 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 4 300 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 8 - Биология ЕГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="ege biology">
+                    <div class="course-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Биология ЕГЭ</h3>
+                    <p>Подготовка к ЕГЭ по биологии. Систематизация знаний по всем разделам биологии, решение задач.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 110 уроков</span>
+                        <span><i class="fas fa-clock"></i> 8 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 4 100 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 9 - Обществознание ЕГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="ege social">
+                    <div class="course-badge">Новый курс</div>
+                    <div class="course-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3>Обществознание ЕГЭ</h3>
+                    <p>Подготовка к ЕГЭ по обществознанию. Экономика, право, политика и социальные отношения.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 105 уроков</span>
+                        <span><i class="fas fa-clock"></i> 7 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 3 800 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 10 - Английский язык ЕГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="ege english">
+                    <div class="course-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Английский язык ЕГЭ</h3>
+                    <p>Подготовка к ЕГЭ по английскому. Аудирование, чтение, грамматика, письмо и устная часть.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 115 уроков</span>
+                        <span><i class="fas fa-clock"></i> 9 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 10-11 класс</span>
+                    </div>
+                    <div class="course-price">от 4 700 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 11 - Физика ОГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="oge physics">
+                    <div class="course-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Физика ОГЭ</h3>
+                    <p>Подготовка к ОГЭ по физике. Экспериментальные задачи, решение тестов, лабораторные работы.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 75 уроков</span>
+                        <span><i class="fas fa-clock"></i> 5 месяцев</span>
+                        <span><i class="fas fa-user-graduate"></i> 9 класс</span>
+                    </div>
+                    <div class="course-price">от 3 500 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+                
+                <!-- Курс 12 - Информатика ОГЭ (скрыт) -->
+                <div class="course-card hidden" data-category="oge informatics">
+                    <div class="course-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Информатика ОГЭ</h3>
+                    <p>Подготовка к ОГЭ по информатике. Алгоритмы, программирование на Python, работа с таблицами.</p>
+                    <div class="course-details">
+                        <span><i class="fas fa-video"></i> 65 уроков</span>
+                        <span><i class="fas fa-clock"></i> 4 месяца</span>
+                        <span><i class="fas fa-user-graduate"></i> 9 класс</span>
+                    </div>
+                    <div class="course-price">от 3 400 ₽/мес</div>
+                    <button class="btn btn-outline btn-block course-details-btn">Подробнее</button>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-primary" id="showAllCourses">Показать все курсы (12)</button>
+                <button class="btn btn-outline" id="hideCourses" style="display: none; margin-left: 15px;">Скрыть часть курсов</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преподаватели -->
+    <section class="teachers" id="teachers">
+        <div class="container">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="section-subtitle">Эксперты с опытом подготовки к экзаменам от 5 лет</p>
+            
+            <div class="teachers-slider">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="img/prepod-cukerberg.webp" alt="Марк Цукерберг">
+                    </div>
+                    <h3>Марк Цукерберг</h3>
+                    <p class="teacher-subject">Математика</p>
+                    <p class="teacher-experience">Опыт: 8 лет</p>
+                    <p class="teacher-quote">"Математика — это не страшно, это интересно!"</p>
+                    <div class="teacher-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="img/prepod-elon.jpg" alt="Илон Маск">
+                    </div>
+                    <h3>Илон Маск</h3>
+                    <p class="teacher-subject">Физика</p>
+                    <p class="teacher-experience">Опыт: 6 лет</p>
+                    <p class="teacher-quote">"Объясняю сложные темы простыми словами"</p>
+                    <div class="teacher-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="img/prepod-Andrew.jpg" alt="Андрей Журавлев">
+                    </div>
+                    <h3>Андрей Журавлев</h3>
+                    <p class="teacher-subject">Математика, Физика и Информатика</p>
+                    <p class="teacher-experience">Опыт: 3 года</p>
+                    <p class="teacher-quote">"Помогу стать лучшим"</p>
+                    <div class="teacher-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="img/prepod-Durov.jpg" alt="Павел Дуров">
+                    </div>
+                    <h3>Павел Дуров</h3>
+                    <p class="teacher-subject">Информатика</p>
+                    <p class="teacher-experience">Опыт: 7 лет</p>
+                    <p class="teacher-quote">"Программирование — это легко"</p>
+                    <div class="teacher-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Библиотека -->
+   <!-- Библиотека -->
+<section class="library" id="library">
+    <div class="container">
+        <h2 class="section-title">Полезные материалы</h2>
+        <p class="section-subtitle">Бесплатные материалы для подготовки к экзаменам</p>
+        
+        <div class="library-grid">
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>Формулы по физике</h3>
+                <p>Все основные формулы для ЕГЭ по физике в одном файле</p>
+                <div class="material-actions">
+                    <button class="btn btn-outline btn-small download-btn">
+                        <i class="fas fa-download"></i> Скачать PDF
+                    </button>
+                </div>
+            </div>
+            
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Вебинар по математике</h3>
+                <p>Разбор сложных задач 2 части ЕГЭ профиль</p>
+                <div class="material-actions">
+                    <button class="btn btn-outline btn-small webinar-btn">
+                        <i class="fas fa-play"></i> Смотреть
+                    </button>
+                </div>
+            </div>
+            
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Шпаргалка по русскому</h3>
+                <p>Правила орфографии и пунктуации для сочинения</p>
+                <div class="material-actions">
+                    <button class="btn btn-outline btn-small download-btn">
+                        <i class="fas fa-download"></i> Скачать
+                    </button>
+                </div>
+            </div>
+            
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>План подготовки</h3>
+                <p>Пошаговый план подготовки к ЕГЭ за 6 месяцев</p>
+                <div class="material-actions">
+                    <button class="btn btn-outline btn-small download-btn">
+                        <i class="fas fa-download"></i> Скачать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Отзывы -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших учеников</h2>
+            <p class="section-subtitle">Что говорят те, кто уже сдал экзамены</p>
+            
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://taxpert.ru/neuroavatar/large/56e5ce956aeae5ce.jpg" alt="Кирилл">
+                        </div>
+                        <div>
+                            <h4>Кирилл В.</h4>
+                            <p class="review-exam">ЕГЭ Математика: 94 балла</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Спасибо преподавателю Анне! Объясняет очень понятно. Без этих курсов вряд ли сдал бы на такой высокий балл. Особенно помогли разборы сложных задач второй части."</p>
+                    <div class="review-date">Август 2025</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://taxpert.ru/neuroavatar/large/89eea28449ab9b54.jpg" alt="Алина">
+                        </div>
+                        <div>
+                            <h4>Алина С.</h4>
+                            <p class="review-exam">ОГЭ Русский: 5</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Очень удобная платформа, можно заниматься в любое время. Уроки короткие и по делу. Благодаря курсу научилась писать хорошие сочинения и сдала ОГЭ на отлично!"</p>
+                    <div class="review-date">Май 2025</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://taxpert.ru/neuroavatar/large/e6360d21a981a8ed.jpg" alt="Максим">
+                        </div>
+                        <div>
+                            <h4>Максим П.</h4>
+                            <p class="review-exam">ЕГЭ Информатика: 98 баллов</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Курс по информатике просто супер! Разобрали все типы задач, научился программировать на Python. Преподаватель Михаил всегда отвечал на вопросы в чате. Рекомендую!"</p>
+                    <div class="review-date">Июль 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Выбери свой тариф</h2>
+            <p class="section-subtitle">Гибкая система оплаты для любого бюджета</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Базовый</h3>
+                        <div class="price">6 999 ₽<span>/месяц</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Доступ к видеоурокам</li>
+                        <li><i class="fas fa-check"></i> Теория в PDF</li>
+                        <li><i class="fas fa-times"></i> Проверка ДЗ</li>
+                        <li><i class="fas fa-times"></i> Вебинары</li>
+                        <li><i class="fas fa-times"></i> Личный куратор</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block pricing-select-btn">Выбрать</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <h3>Стандарт</h3>
+                        <div class="price">9 999 ₽<span>/месяц</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Всё из Базового</li>
+                        <li><i class="fas fa-check"></i> Проверка ДЗ</li>
+                        <li><i class="fas fa-check"></i> Участие в вебинарах</li>
+                        <li><i class="fas fa-check"></i> Чат с преподавателем</li>
+                        <li><i class="fas fa-times"></i> Личный куратор</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block pricing-select-btn">Выбрать</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Премиум</h3>
+                        <div class="price">14 999 ₽<span>/месяц</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Всё из Стандарта</li>
+                        <li><i class="fas fa-check"></i> Личный куратор</li>
+                        <li><i class="fas fa-check"></i> Индивидуальный план</li>
+                        <li><i class="fas fa-check"></i> Пробные экзамены</li>
+                        <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block pricing-select-btn">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title">Частые вопросы</h2>
+        <p class="section-subtitle">Ответы на самые популярные вопросы о подготовке с EasyBrain</p>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли вернуть деньги, если не понравится?</span>
+                    <svg class="faq-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, мы предоставляем гарантию возврата средств в течение первых 14 дней после покупки курса, если он вам не подошел. Для возврата необходимо написать на почту support@EasyBrain.ru с указанием причины.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>На какое время дается доступ к курсу?</span>
+                    <svg class="faq-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Доступ к материалам курса предоставляется на 12 месяцев с момента покупки. Этого достаточно для полноценной подготовки. При необходимости доступ можно продлить со скидкой 50%.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Есть ли домашние задания?</span>
+                    <svg class="faq-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, после каждого урока есть практические задания. В тарифах "Стандарт" и "Премиум" задания проверяются преподавателем с обратной связью. В тарифе "Базовый" доступны только автоматические тесты.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли заниматься с телефона?</span>
+                    <svg class="faq-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, наша платформа полностью адаптирована для мобильных устройств. Вы можете заниматься с телефона или планшета в любое время. Также доступно наше мобильное приложение для iOS и Android.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Контакты и форма -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="section-title">Начни подготовку сегодня!</h2>
+                <p class="contact-subtitle">Запишись на бесплатный пробный урок и получи консультацию по подготовке к экзаменам.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (985) 087-05-92</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@EasyBrain.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Время работы</h4>
+                            <p>Пн-Пт: 9:00-21:00 </p>
+                               <p>Сб-Вс: 10:00-18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link vk">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="social-link telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Записаться на пробный урок</h3>
+                <form id="registrationForm" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя и фамилия *</label>
+                        <div class="form-group with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Введите ваше имя и фамилию" required minlength="2">
+                        </div>
+                        <span class="field-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Электронная почта *</label>
+                        <div class="form-group with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="example@mail.ru" required>
+                        </div>
+                        <span class="field-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Телефон *</label>
+                        <div class="phone-group">
+                            <div class="phone-prefix">
+                                <i class="fas fa-phone"></i>
+                                <span>+7</span>
+                            </div>
+                            <input type="tel" id="phone" placeholder="(999) 123-45-67" required pattern="^\(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                        </div>
+                        <small class="field-error">Формат: (999) 123-45-67</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade" class="form-label">Класс *</label>
+                        <select id="grade" required>
+                            <option value="" disabled selected>Выберите ваш класс</option>
+                            <option value="9">9 класс (ОГЭ)</option>
+                            <option value="10">10 класс</option>
+                            <option value="11">11 класс (ЕГЭ)</option>
+                            <option value="other">Другой</option>
+                        </select>
+                        <span class="field-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Предмет для подготовки *</label>
+                        <select id="subject" required>
+                            <option value="" disabled selected>Выберите предмет</option>
+                            <option value="math">Математика</option>
+                            <option value="russian">Русский язык</option>
+                            <option value="physics">Физика</option>
+                            <option value="informatics">Информатика</option>
+                            <option value="all">Все предметы</option>
+                        </select>
+                        <span class="field-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preparation-type" class="form-label">Тип подготовки</label>
+                        <select id="preparation-type">
+                            <option value="" selected>Не выбрано</option>
+                            <option value="oge">ОГЭ</option>
+                            <option value="ege">ЕГЭ</option>
+                            <option value="both">ОГЭ и ЕГЭ</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Ваши пожелания или вопросы</label>
+                        <textarea id="message" placeholder="Расскажите о ваших целях или задайте вопрос..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">
+                            Я согласен на обработку персональных данных в соответствии с 
+                            <a href="#" class="policy-link">Политикой конфиденциальности</a>
+                        </label>
+                        <span class="field-error"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">
+                            Хочу получать полезные материалы и уведомления о новых курсах
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Отправить заявку
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">
+                        * Обязательные поля для заполнения
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EasyBrain</span>
+                    </a>
+                    <p>Онлайн-школа подготовки к ОГЭ и ЕГЭ. Помогаем школьникам сдать экзамены на высокие баллы с 2020 года.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Курсы</h4>
+                    <ul>
+                        <li><a href="#courses">Математика</a></li>
+                        <li><a href="#courses">Русский язык</a></li>
+                        <li><a href="#courses">Физика</a></li>
+                        <li><a href="#courses">Информатика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#home">О нас</a></li>
+                        <li><a href="#teachers">Преподаватели</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Помощь</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Поддержка</a></li>
+                        <li><a href="#" class="policy-link">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="offer-link">Договор-оферта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 EasyBrain. Онлайн-школа подготовки к экзаменам. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
